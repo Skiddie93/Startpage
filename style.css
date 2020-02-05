@@ -1,5 +1,5 @@
 .container {
-  background-color: #00affa;
+  background-color: blue;
   height: 100px;
   margin-left: 25%;
   margin-right: 25%;
@@ -21,12 +21,12 @@ border-radius: 40px;
 }
 
   .dropbtn {
-    background-color: #4CAF50;
+    background: green;
     color: white;
     border: none;
     height: 100%;
       width: 100%;
-      transition: all ease 0.5s;
+
 
 
   }
@@ -78,15 +78,24 @@ a {
 
 
 
-.dropdown:hover .dropbtn {background-color: #ddd; color: black; -moz-transition: all ease 1s;}
+.dropdown:hover .dropbtn {background: linear-gradient(to right, green 50%, red 50%);
+background-size: 200% 100%;
+background-position:right bottom;
+transition: all ease 0.25s;
+color: black;
+}
 
-.dropdown:hover .dropdown-content   {max-height: 200px; transition: max-height 0.2s ease-in;
+
+
+
+.dropdown:hover .dropdown-content   { max-height: 200px; transition: max-height 0.25s ease-in;
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+transition-delay: 0s;}
 
 .dropdown-content :hover {color: green;}
 
 .dropdown:hover li {
   transition: all ease 0.5s;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
   opacity: 1;}
