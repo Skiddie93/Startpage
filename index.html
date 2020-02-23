@@ -5,27 +5,19 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body onload="setInterval('showTime()', 10)" >
+
+
+
+
+
 <div class="time">
+<p id="day"></p>
+<p id="something"></p>
 
-    <script type="text/javascript">
-        var f=new Date()
-        var d=new Date()
-        var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
-                    "Friday","Saturday")
-        document.write( weekday[d.getDay()] +" "+  f.getDate())
-    </script>
 
-    <br>
 
-    <script>
-
-var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes()
-document.write ( time )
-
-    </script>
-
+  </p>
   </div>
 
     <div class="search">
@@ -141,5 +133,7 @@ document.write ( time )
 
   </div>
 
+
+<script src="js/javascript.js"></script>
   </body>
 </html>

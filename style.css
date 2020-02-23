@@ -1,6 +1,7 @@
 body {
 font-family: noto mono;
 background-image: url(media/SEA.jpg);
+margin: 0px;
 }
 
 input[type=text] {
@@ -11,7 +12,7 @@ input[type=text] {
   font-size: 20px;
   border: 0px;
   border-radius: 30px;
-  color: #f2f2f2;
+  color: #ffffff;
   font-family: "Noto Mono"
 
 }
@@ -30,8 +31,20 @@ float: right;
 font-size: 30px;
 margin: 30px;
 color: white;
+border-style: solid;
+padding: 0px;
 
 }
+
+p {
+
+padding: 0px;
+margin: 3px;
+margin-right: 20px;
+margin-left: 20px;
+
+}
+
 
 
 .container {
@@ -45,7 +58,8 @@ color: white;
  flex-direction: row;
 border-radius: 30px;
 position: absolute;
-top: 40%;
+top: 43%;
+
 
 
 
@@ -57,6 +71,7 @@ top: 40%;
   position: relative;
   display: inline-block;
   width: 18%;
+
 
 }
 
@@ -80,13 +95,14 @@ top: 40%;
     max-height: 0px;
     visibility: hidden;
     opacity: 0;
-  background-color: #abac7b;
+  background-color: white;
 padding-bottom: 5px;
   width: 100%;
   text-align: center;
   transition: all ease 0.2s;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+
 
 
 
@@ -115,8 +131,8 @@ padding-bottom: 5px;
 
 a {
 
-  text-decoration: none;
-  color: white;
+  text-decoration: underline;
+  color: #1C272C;
   transition: all ease 0.1s;
 
 }
@@ -125,21 +141,22 @@ a {
 
 
 
-.dropdown:hover .dropbtn {background: linear-gradient(to right, #1C272C 50%, #698366 50%);
+.dropdown:hover .dropbtn {background: linear-gradient(to right, #1C272C 50%, #ffffff 50%);
 background-size: 200% 100%;
-background-position:right bottom;
+background-position: bottom right;
+border-bottom: 1px solid #1C272C;
 transition: all ease 0.2s;
 }
 
 
 
 
-.dropdown:hover .dropdown-content   { max-height: 300px; transition: max-height 0.32s ease-in;
+.dropdown:hover .dropdown-content   { max-height: 500px; transition: max-height 0.32s ease-in;
   visibility: visible;
   opacity: 1;
 transition-delay: 0s;}
 
-.dropdown-content :hover {color: #1C272C;}
+.dropdown-content :hover {color: #46616e;}
 
 .dropdown:hover li {
   transition: all ease 0.5s;
