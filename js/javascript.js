@@ -1,29 +1,3 @@
-
-function dayDate(){
-let newDate= new Date;
-let day=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
-            "Friday","Saturday")
-let date = newDate.getDate();
-let dayName = day[newDate.getDay()];
-document.getElementById("day").innerHTML = dayName + " " + date;
-}
-
-dayDate()
-
-function showTime()
-{
-  let hours;
-  let mminutes;
-  let time=new Date()
-  hours= time.getHours();
-  minutes= time.getMinutes();
-  if(minutes < 10)
-      {
-          minutes = "0" + minutes
-      }
-document.getElementById("time").innerHTML = hours + ":" + minutes;
-}
-/*_____________________________________________________________________*/
 var act = false;
 document.getElementById("hov1").addEventListener("onmouseover", hov1());
 
@@ -142,6 +116,11 @@ if (indexarray > -1) {
 
 
 function readLS(){
+
+  if (localStorage.length==0) {
+    let fake = JSON.stringify(todoarray);
+    localStorage.setItem("1", fake);
+  }
 
 let readlist = JSON.parse(localStorage.getItem("1"))
 for (var i = 0; i < readlist.length; i++) {
