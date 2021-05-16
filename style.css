@@ -1,30 +1,121 @@
+@font-face {
+  font-family:"Noto Mono";
+  src: url("fonts/NotoMono.ttf") format("truetype");
+}
+
 body {
-font-family: noto mono;
+font-family: "Noto Mono" ;
 background-image: url(media/SEA.jpg);
+height: 100vh;
+width: 100vw;
 margin: 0px;
+z-index: -1;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 input[type=text] {
+
   background-color: #1C272C;
-  height: 50px;
-  width: 700px;
+  height: 6vh;
   text-align: center;
   font-size: 20px;
   border: 0px;
   border-radius: 30px;
   color: #ffffff;
-  font-family: "Noto Mono"
+  font-family: "Noto Mono";
+  justify-content: center;
+  position: absolute;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  top: 32%;
 
 }
 
-.search {
 
-position: absolute;
-top: 35%;
-left: 50%;
-transform: translate(-50%, -50%);
+.tlbtn {
+
+  position: absolute;
+  top: 53.5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #1C272C;
+  border:  none;
+  transition: all ease 0.4s;
+  color: #ffffff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tlbtn-active{
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: auto;
+  width: 50%;
+  border-radius: 30px;
+  background-color: #1C272C;
+  border:  none;
+  transition: all ease 0.4s;
+  font-size: 20px;
+  color: #ffffff;
+  max-height: 300px;
+  overflow: scroll;
+  z-index: 1;
 
 }
+
+.tlicon {
+  position: fixed;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+  z-index: -2;
+
+}
+
+.tlicon-active{
+display: none;
+
+
+}
+
+
+
+.inputstyle{
+  background: #1C272C;
+  border: none;
+  width: 90%;
+  height: 50px;
+  font-size: 18px;
+  color: white;
+  margin-left: 10px;
+  border-bottom: solid 1px;
+  font-family: "Noto Mono";
+  padding-left: 10px;
+
+}
+
+.listNode {
+  margin-left: 15px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.listNode-active {
+
+}
+
+
 
 .time {
 float: right;
@@ -59,7 +150,7 @@ margin-left: 20px;
 border-radius: 30px;
 position: absolute;
 top: 43%;
-
+z-index: 3
 
 
 
@@ -76,7 +167,9 @@ top: 43%;
 }
 
   .dropbtn {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #1C272C;
     color: white;
     border: none;
@@ -102,6 +195,7 @@ padding-bottom: 5px;
   transition: all ease 0.2s;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+  z-index: 3;
 
 
 
@@ -115,8 +209,10 @@ padding-bottom: 5px;
   padding-top: 5px;
   color: #ffffff;
   font-size: 20px;
+  font-weight: 500;
   text-decoration: none;
   display: block;
+
 
 
 
@@ -131,7 +227,7 @@ padding-bottom: 5px;
 
 a {
 
-  text-decoration: underline;
+  text-decoration: none;
   color: #1C272C;
   transition: all ease 0.1s;
 
@@ -141,7 +237,9 @@ a {
 
 
 
-.dropdown:hover .dropbtn {background: linear-gradient(to right, #1C272C 50%, #ffffff 50%);
+
+
+.dropdown:hover .dropbtn {background: linear-gradient(to right, #1C272C 50%, #ffff 50%);
 background-size: 200% 100%;
 background-position: bottom right;
 border-bottom: 1px solid #1C272C;
@@ -156,13 +254,54 @@ transition: all ease 0.2s;
   opacity: 1;
 transition-delay: 0s;}
 
+
 .dropdown-content :hover {color: #46616e;}
 
 .dropdown:hover li {
   transition: all ease 0.5s;
   transition-delay: 0.1s;
-  opacity: 1;}
+  opacity: 1;
+  z-index: 3;
+}
 
 
 
 .dropdown:hover path {transition: all ease 0.8s; fill: #1C272C;}
+
+
+.addicon{
+position: absolute;
+left: 91%;
+bottom: -2px;
+cursor: pointer;
+}
+
+.inputline{
+position: relative;
+}
+
+.todoListWrap{
+display: none;
+}
+
+
+.todoListWrap-active{
+display: contents;
+width: inherit
+}
+
+.xButton{
+  height: 23px;
+  width: 30px;
+  fill: white;
+  transform: translate(0%, 20%);
+  float: right;
+  margin-right: 3%;
+  cursor: pointer;
+}
+
+*:focus {
+
+  outline:none
+
+}
